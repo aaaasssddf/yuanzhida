@@ -1,0 +1,10 @@
+<view class="container {{multiLine?'column':''}}">
+  <view class="weui-cells weui-cells_form input_cell">
+    <view wx:if="{{label}}" class="weui-cells__title label">{{label}}</view>
+
+    <view class="weui-cell_bd textarea_cell">
+      <textarea class="weui-textarea textarea" wx:if="{{multiLine}}" value="{{value}}" maxlength="1500" auto-height="true" placeholder="{{placeholder}}" bind:input="onInput" data-key="{{key}}" rows="3"></textarea>
+      <input wx:else type="text" value="{{value}}" class="input" placeholder="{{placeholder}}" bind:input="onInput" data-key="{{key}}" password="{{password}}" />
+    </view>
+  </view>
+</view>

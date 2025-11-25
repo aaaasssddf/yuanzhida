@@ -1,0 +1,16 @@
+<view class="container">
+  <view class="item">
+    <block wx:if="{{isCommentOwn}}">
+      <the-button bind:the_tap="correntComment" size="tiny" text="修改"></the-button>
+      <the-button bind:the_tap="deleteComment" size="tiny" text="删除"></the-button>
+    </block>
+  </view>
+  <view class="item">
+    <the-button size="tiny" wx:if="{{isQuestionOwn}}" bind:the_tap="flagUseful" text="{{useful?'取消标记':'标记有用'}}"></the-button>
+    <image class="icon" src="{{useful?'/assets/image/useful.svg':'/assets/image/useless.svg'}}" mode="heightFix" />
+    <view class="item">
+      <image bind:tap="likeComment" class="icon" src="{{likeStatus=='已点赞'?'/assets/image/like_done.svg':'/assets/image/like.svg'}}" mode="heightFix" />
+      {{likeCount}}
+    </view>
+  </view>
+</view>

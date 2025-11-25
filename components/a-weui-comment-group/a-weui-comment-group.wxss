@@ -1,0 +1,39 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  gap: 20rpx;
+}
+
+.item {
+  display: flex;
+  flex-direction: column;
+  padding: 10rpx;
+  gap: 8rpx;
+}
+
+.item:last-of-type {
+  border: 0;
+}
+
+.content {
+  font-size: 40rpx;
+  padding: 10rpx;
+  opacity: .75;
+}
+
+.comment-container {
+  background-color:ghostwhite;
+  width: 89%;
+  padding: 40rpx;
+  align-self: center;
+  border-radius: 20rpx;
+  display: flex;
+  flex-direction: column;
+  gap:10rpx;
+  box-shadow:5px 3px 3px #808080;
+}
+
+.comment-info {
+  padding: 10rpx;
+  padding-bottom: 0rpx;
+}

@@ -1,0 +1,7 @@
+<view class="container">
+  <block wx:for="{{inputItems}}" wx:key="key">
+    <the-input bind:input="onInput" class="item" wx:if="{{item.type=='text'}}"></the-input>
+    <the-images-input class="item" wx:if="{{item.type=='images'}}" bind:input="onInput"></the-images-input>
+    <the-subjects-selector class="item" bind:input="onInput" wx:if="{{item.type=='subject'}}"></the-subjects-selector>
+  </block>
+</view>

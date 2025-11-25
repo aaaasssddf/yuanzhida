@@ -1,0 +1,8 @@
+{
+  "component": true,
+  "usingComponents": {
+    "the-input": "/components/a-weui-input/a-weui-input",
+    "the-images-input": "/components/a-weui-image-input/a-weui-image-input",
+    "the-subjects-selector": "/components/subjects-selector/subjects-selector"
+  }
+}

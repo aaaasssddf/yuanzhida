@@ -1,0 +1,8 @@
+{
+  "component": true,
+  "usingComponents": {
+    "the-user-and-time": "/components/user-and-time/user-and-time",
+    "the-images-preview": "/components/images-preview/images-preview",
+    "the-comment-info": "/components/a-weui-comment-info/a-weui-comment-info"
+  }
+}

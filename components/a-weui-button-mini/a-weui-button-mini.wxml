@@ -1,0 +1,1 @@
+<view class="weui-btn weui-btn_default weui-btn_mini {{disabled?'disabled':''}} {{size}}"   bind:tap="_ontap">{{text}}</view>

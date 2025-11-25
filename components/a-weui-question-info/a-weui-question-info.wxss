@@ -1,0 +1,36 @@
+.container{
+  display: flex;
+  flex-direction: column;
+}
+.item,
+.buttons{
+  display: flex;
+  flex-direction: row;
+  gap:10rpx;
+}
+.statistics {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap:20rpx;
+  justify-content: flex-start;
+}
+
+.item {
+  min-width: 80rpx;
+  gap: 3rpx;
+}
+
+.container {
+  justify-content: space-between;
+}
+
+.icon {
+  height: 35rpx;
+  width: 35rpx;
+  align-self: center;
+}
+
+.solved-flag-text {
+  align-self: center;
+}

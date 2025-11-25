@@ -1,0 +1,6 @@
+<view class="image-list">
+  <the-images-preview bind:delImage="onDelImage" id="images-preview"></the-images-preview>
+  <view class="button-container">
+    <the-button size="small"  text="{{addImageText}}" bind:the_tap="addImage" disabled="{{!canAddImage}}"></the-button>
+  </view>
+</view>

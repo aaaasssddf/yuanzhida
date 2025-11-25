@@ -1,0 +1,7 @@
+{
+  "component": true,
+  "usingComponents": {
+    "the-button": "/components/a-weui-button-mini/a-weui-button-mini",
+    "the-images-preview": "/components/images-preview/images-preview"
+  }
+}

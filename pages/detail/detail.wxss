@@ -1,18 +1,37 @@
-.container {
+.page {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
   height: 100%;
-
 }
 
-.main,
-.question {
+.container {
+  justify-content: flex-start;
+  display: flex;
+  flex-direction: row;
+}
+
+.question-box {
   display: flex;
   flex-direction: column;
   gap: 10rpx;
+  align-self:center;
+  margin-top: 20rpx;
+  margin-bottom: 20rpx;
+  width: 87%;
+  padding:40rpx;
+  border-radius: 25rpx;
+  box-shadow:5px 3px 3px #808080;
+  background-color: ghostwhite;
 }
-.main{
+
+.main {
   box-sizing: border-box;
   padding: 20rpx;
+  display: flex;
+  flex-direction: column;
 }
+
 .title {
   font-size: 60rpx;
 }
@@ -31,14 +50,79 @@
 
 .button-container {
   display: flex;
-  flex-direction: row;
-  justify-content: flex-end;
-  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  align-self: center;
+  padding: 20rpx;
 }
 
 .line {
-  border-top: 1px solid black;
-  width: 200vw;
-  position: relative;
-  left: -50vw;
+  width: 100%;
+  height: 3rpx;
+  margin-bottom: 10rpx;
+  align-self: center;
+  background-color: black;
+}
+
+.input-header {
+  align-self: center;
+  display: flex;
+  padding: 20rpx;
+  width: 80%;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.input-container {
+  display: flex;
+  flex-direction: column;
+  width: 95%;
+  padding: 20rpx;
+  justify-content: flex-start;
+  align-self: center;
+  border-radius: 20rpx;
+  background-color: aliceblue;
+  max-height: 720rpx;
+}
+
+#input-group {
+  padding: 20rpx;
+}
+
+.input-cell {
+  display: flex;
+  flex-direction: column;
+  padding: 20rpx;
+  gap: 10rpx;
+}
+
+.close-input{
+  align-self:flex-end;
+}
+
+#cancel-correct {
+  padding: 10rpx;
+}
+
+#submit-correct {
+  padding: 10rpx;
+}
+
+#submit-new-comment {
+  padding: 10rpx;
+}
+#show-input-button {
+  padding: 10rpx;
+}
+
+.show-input-button-cell {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-self: flex-end;
+  min-height: 100rpx;
+}
+
+#answer-list-title{
+  margin-left: 40rpx;
 }

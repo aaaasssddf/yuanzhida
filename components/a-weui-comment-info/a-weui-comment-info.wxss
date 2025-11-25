@@ -1,0 +1,18 @@
+.container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.item {
+  display: flex;
+  flex-direction: row;
+  gap: 10rpx;
+  align-self: center;
+}
+
+.icon {
+  width: 30rpx;
+  height: 30rpx;
+  align-self: center;
+}

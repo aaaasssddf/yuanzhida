@@ -1,0 +1,29 @@
+<view class="container">
+  <view class="buttons">
+    <image src="{{solvedFlag?'/assets/image/done.svg':'/assets/image/undone.svg'}}" class="icon" />
+    <view class="sovled-flag-text">{{solvedFlag?'已解决':'未解决'}}</view>
+    <block wx:if="{{isOwn&&canConduct}}">
+      <the-button size="tiny" bind:the_tap="flagSolved" text="{{solvedFlag?'取消标记':'标记解决'}}"></the-button>
+      <the-button size="tiny" size="tiny" bind:the_tap="correntQuestion" text="修改"></the-button>
+      <the-button size="tiny" size="tiny" bind:the_tap="deleteQuestion" text="删除"></the-button>
+    </block>
+  </view>
+  <view class="statistics">
+    <view class="item">
+      <image class="icon" src="/assets/image/view.svg" mode="heightFix" />
+      {{viewCount}}
+    </view>
+    <view class="item">
+      <image bind:tap="likeQuestion" class="icon" src="{{likeStatus=='已点赞'?'/assets/image/like_done.svg':'/assets/image/like.svg'}}" mode="heightFix" />
+      {{likeCount}}
+    </view>
+    <view class="item">
+      <image bind:tap="collectQuestion" class="icon" src="{{collectStatus=='已收藏'?'/assets/image/collect.svg':'/assets/image/uncollect.svg'}}" mode="heightFix" />
+      {{collectCount}}
+    </view>
+    <view class="item">
+      <image class="icon" src="/assets/image/comment.svg" mode="heightFix" />
+      {{commentCount}}
+    </view>
+  </view>
+</view>

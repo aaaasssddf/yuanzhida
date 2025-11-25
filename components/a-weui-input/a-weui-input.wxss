@@ -1,0 +1,26 @@
+.textarea {
+  min-height: 200rpx;
+  min-width: 600rpx;
+  width: 100%;
+  padding: 20rpx;
+  box-sizing: border-box;
+  margin-top: 20rpx;
+  
+}
+
+.input_cell {
+  border-radius: 20rpx;
+}
+
+.label{
+  margin-right: 20rpx;
+}
+
+.textarea_cell{
+  margin-top: -20rpx;
+  padding: 30rpx;
+}
+
+.container{
+  margin-bottom: 10rpx;
+}

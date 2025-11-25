@@ -1,11 +1,11 @@
 {
   "usingComponents": {
-    "the-button": "/components/button/button",
-    "the-input-group": "/components/input-group/input-group",
+    "the-button": "/components/a-weui-button-mini/a-weui-button-mini",
+    "the-input-group": "/components/a-weui-input-group/a-weui-input-group",
     "the-images-preview": "/components/images-preview/images-preview",
     "the-user-and-time": "/components/user-and-time/user-and-time",
-    "the-question-info": "/components/question-info/question-info",
-    "the-comments": "/components/comments/comments",
+    "the-question-info": "/components/a-weui-question-info/a-weui-question-info",
+    "the-comments": "/components/a-weui-comment-group/a-weui-comment-group",
     "the-pagination": "/components/pagination/pagination"
   }
 }

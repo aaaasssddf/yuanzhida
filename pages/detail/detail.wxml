@@ -1,28 +1,39 @@
-<scroll-view class="container" scroll-y="true">
-  <view class="main">
-    <view class="question">
-      <view class="title">{{question.title}}</view>
-      <the-user-and-time id="user-and-time"></the-user-and-time>
-      <the-question-info bind:correntQuestion="onCorrentQuestion" id="question-info"></the-question-info>
-      <view class="subject">{{question.subject_name}}</view>
-      <view class="content">{{question.content}}</view>
-      <the-images-preview id="images-preview"></the-images-preview>
+<view class="page">
+  <scroll-view class="container" style="height :{{containerHeight}}rpx" scroll-y="true" bindscrolltolower="scrollToLower">
+    <view class="main">
+      <view class="question-box">
+        <view class="title">{{question.title}}</view>
+        <view class="line"></view>
+        <the-user-and-time id="user-and-time"></the-user-and-time>
+        <view class="subject">{{question.subject_name}}</view>
+        <view class="content">{{question.content}}</view>
+        <the-images-preview id="images-preview"></the-images-preview>
+        <the-question-info bind:correntQuestion="onCorrentQuestion" id="question-info"></the-question-info>
+      </view>
+      <view class="content" id="answer-list-title">解答列表</view>
+      <the-comments bind:correctComment="onCorrectComment" bind:update="onUpdate" id="comments"></the-comments>
     </view>
-    <view class="line"></view>
-    <view class="content">解答列表</view>
-    <the-comments bind:correctComment="onCorrectComment" bind:update="onUpdate" id="comments"></the-comments>
-    <the-pagination id="pagination" bind:redirect="onCommmentRedirect"></the-pagination>
-    <view class="line"></view>
-    <view class="content">新建解答</view>
-    <the-input-group id="input-group" inputItems="{{inputItems}}" bind:input="onInput"></the-input-group>
-    <view class="button-container">
-      <block wx:if="{{isCorrect}}">
-        <the-button size="small" text="提交修改" bind:the_tap="submitCorrect"></the-button>
-        <the-button size="small" text="取消修改" bind:the_tap="cancelCorrect"></the-button>
-      </block>
-      <block wx:else>
-        <the-button size="small" text="提交解答" bind:the_tap="submit_answer"></the-button>
-      </block>
+  </scroll-view>
+  <scroll-view class="input-container" scroll-y="true">
+    <view class="input-cell" wx:if="{{isNewConmmentVisible}}">
+      <view class="input-header">
+        <view class="content">{{inputHeader}}</view>
+        <the-button size="small" text="关闭" class="close-input" bind:the_tap="closeInput"></the-button>
+      </view>
+      <the-input-group id="input-group" inputItems="{{inputItems}}" bind:input="onInput"></the-input-group>
+      <view class="button-container">
+        <view wx:if="{{isCorrect}}">
+          <the-button size="small" id="submit-correct" text="提交修改" bind:the_tap="submitCorrect"></the-button>
+          <the-button size="small" id="cancel-correct" text="取消修改" bind:the_tap="cancelCorrect"></the-button>
+        </view>
+        <view wx:else>
+          <the-button size="small" id="submit-new-comment" text="提交解答" bind:the_tap="submit_answer"></the-button>
+        </view>
+      </view>
     </view>
-  </view>
-</scroll-view>
+    <view class="show-input-button-cell" wx:else>
+      <the-button id="show-input-button" text="新建解答" bind:the_tap="showInput"></the-button>
+    </view>
+  </scroll-view>
+
+</view>
